@@ -1,0 +1,128 @@
+//Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+//Vars
+//Fonts Vars
+$font-inter: 'Inter', sans-serif;
+$font-lexend: 'Lexend Deca', sans-serif;
+//Color Vars
+$very-dark-blue: hsl(233, 47%, 7%);
+$dark-desat-blue: hsl(244, 38%, 16%);
+$violet: rgb(170, 92, 219);
+$white: hsl(0, 0%, 100%);
+$tp-white: hsla(0, 0%, 100%, 0.75);
+$xtp-white: hsla(0, 0%, 100%, 0.6);
+
+.white{
+    color: $white;
+}
+.xtp-white{
+    color: $xtp-white;
+}
+.violet{
+    color: $violet;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: $very-dark-blue;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+.flex-container{
+    @media(min-width: 900px){
+        width: 875px;
+        height: 350px;
+        flex-direction: row;
+    }
+    width: 90%;
+    background: $dark-desat-blue;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    overflow: hidden;
+}
+.text-wrapper{
+    @media(min-width: 900px){
+        text-align: left;
+        margin: 50px 0;
+    }
+    padding: 0 50px;
+    text-align: center;
+    margin: 30px 0;
+}
+.flex-content, .flex-image{
+    flex: 1;
+}
+.image-hero{
+    position: relative;
+    z-index: 1;
+}
+.image-hero:after {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(69, 16, 102, 0.5);
+    top: 0;
+    left: 0;
+    display: block;
+    content: "";
+}
+.flex-image img{
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.flex-content{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.flex-content h1{
+    font-family: $font-inter;
+    font-weight: 700;
+    font-size: 21pt;
+    margin-bottom: 25px !important;
+}
+.flex-content p{
+    font-family: $font-inter;
+    font-weight: 400;
+    font-size: 10pt;
+    line-height: 1.5;
+    @media(min-width: 900px){
+        margin-bottom: 75px;
+    }
+}
+.flex-stats{
+    @media(min-width: 900px){
+        display: flex;
+    }
+    display: inline-block;
+    margin: 30px 0 0 0;
+}
+.flex-stats h3{
+    font-family: $font-inter;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+.flex-stats p{
+    font-family: $font-lexend;
+    font-weight: 400;
+    font-size: 8pt;
+}
+.stat-2{
+    @media(min-width: 900px){
+        margin: 0 50px;
+    }
+    margin: 20px 0;
+}
